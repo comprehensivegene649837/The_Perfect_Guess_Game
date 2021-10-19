@@ -3,9 +3,9 @@ randnum =  random.randint(1,100)
 
 userGuess =  None
 guess = 3
-
+print("****Welcome to the THE_PERFECT_GUESS_GAME*****")
 while True: #(userGuess!=randnum):
-    userGuess = int(input("enter the number: "))
+    userGuess = int(input("guess the number: "))
     
     if userGuess!=randnum:
         guess= guess -1 
