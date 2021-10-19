@@ -1,38 +1,54 @@
+from math import e
 import random
-randnum =  random.randint(1,100)
 
+randnum =  random.randint(1,100)
+q= None
 userGuess =  None
 guess = 3
-print("****Welcome to the THE_PERFECT_GUESS_GAME*****")
-while True: #(userGuess!=randnum):
-    userGuess = int(input("guess the number: "))
+
+print("***** Welcome to the THE PERFECT GUESS GAME!***** ")
+
+while True:
+    print("type 'q' to exit the game: ", "\n", "or enter the guess: " )
+    userGuess = ((input("enter the number: ")))
     
-    if userGuess!=randnum:
+    if userGuess == 'q':
+            break
+
+    try:
+        
+        userGuess = int(userGuess)  
+    except Exception as e:
+            print("error: ", e)
+            continue
+    if (userGuess)!=randnum:
         guess= guess -1 
         
     
     
-    if userGuess==randnum:
+    if (userGuess)==randnum:
         print("you guessed it right!")
-    else:    
+
+    else:  
         if userGuess>randnum:
         
             print("hint: opps! you should have entered a lower number")
         
-        
-#if userGuess<randnum:
+            print(f"now you have {guess} number of guesses left, be careful!")
+
         else:
-            print("hint: ohh! you were supposed to enter a higher number")
+                print("hint: ohh! you were supposed to enter a higher number")
         
-        
+                print(f"now you have {guess} number of guesses left, be careful!")
 
         
     if guess == 0:
-        #if guess ==1:
-            #print("LAST CHANCE!")
+        
         
         print("you ran out of guesses! better luck next time")
         break
-    print(f"now you have {guess} number of guesses left, be careful!")
+    
+    
     
 print("right number: ", randnum)
+print("thanks for playing! see you next time :)")
