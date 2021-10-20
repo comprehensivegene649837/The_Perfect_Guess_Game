@@ -13,7 +13,8 @@ while True:
     userGuess = ((input("enter the number: ")))
     
     if userGuess == 'q':
-            break
+        print("See you next time ;)")
+        break
 
     try:
         
@@ -41,14 +42,26 @@ while True:
         
                 print(f"now you have {guess} number of guesses left, be careful!")
 
+
         
-    if guess == 0:
+    if guess<= 0:
         
         
-        print("you ran out of guesses! better luck next time")
-        break
+        print("you ran out of guesses! better luck next time, thanks for playing :)")
+
+        
+        break   
     
+
     
+     
+   
+   
+    
+
     
 print("right number: ", randnum)
-print("thanks for playing! see you next time :)")
+
+
+stop_excecution = input("Press any key to quit: ")
+        
